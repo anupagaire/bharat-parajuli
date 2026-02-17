@@ -10,7 +10,7 @@ function Hero() {
           <h1 className="hero-title">भरत पराजुली</h1>
           <div className="hero-subtitle-container">
             <img src="/images/bell-icon.png" alt="घण्टी चिन्ह" className="hero-symbol" />
-            <h2 className="hero-subtitle">नेपाल स्वतन्त्र पार्टी</h2>
+            <h2 className="hero-subtitle">राष्ट्रिय स्वतन्त्र पार्टी</h2>
           </div>
           <p className="hero-location">सिन्धुपाल्चोक क्षेत्र नं. १, वडा नं. ०१</p>
           <p className="hero-identity">ब्रह्माणी जलविद्युतका स्वामी</p>
