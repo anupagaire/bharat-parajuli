@@ -1,0 +1,314 @@
+.vote-animation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.vote-animation-container {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vote-content {
+  position: relative;
+  text-align: center;
+}
+
+/* Swastik Symbol */
+.swastik-symbol {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  animation: rotateIn 0.8s ease-out;
+  position: relative;
+}
+
+.swastik-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 5px 15px rgba(255, 107, 107, 0.4));
+}
+
+/* Bell Icon */
+.vote-bell {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: bellBounce 0.6s ease-out 0.3s;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.vote-bell svg {
+  width: 45px;
+  height: 45px;
+}
+
+/* Vote Text */
+.vote-text-container {
+  margin-top: 20px;
+}
+
+.vote-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  animation: slideUp 0.5s ease-out 0.5s both;
+}
+
+.vote-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 25px;
+  animation: slideUp 0.5s ease-out 0.6s both;
+}
+
+.vote-party {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 10px;
+  animation: slideUp 0.5s ease-out 0.7s both;
+}
+
+.vote-candidate {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideUp 0.5s ease-out 0.8s both;
+}
+
+/* Confetti */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -20px;
+  border-radius: 50%;
+  animation: confettiFall 3s linear infinite;
+}
+
+/* Ink mark effect */
+.ink-mark {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 60px;
+  height: 60px;
+  animation: inkAppear 0.5s ease-out 1s both;
+}
+
+.ink-dot {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.8) 0%, rgba(102, 126, 234, 0.3) 70%, transparent 100%);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.ink-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(102, 126, 234, 0.5);
+  border-radius: 50%;
+  animation: ripple 1.5s ease-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes bellBounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
+  75% { transform: translateY(-15px); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes inkAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vote-animation-container {
+    padding: 40px 30px;
+  }
+
+  .swastik-symbol {
+    width: 100px;
+    height: 100px;
+  }
+
+  .vote-bell {
+    width: 70px;
+    height: 70px;
+  }
+
+  .vote-bell svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vote-title {
+    font-size: 2rem;
+  }
+
+  .vote-subtitle {
+    font-size: 1rem;
+  }
+
+  .vote-party {
+    font-size: 1.1rem;
+  }
+
+  .vote-candidate {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vote-animation-container {
+    padding: 30px 20px;
+  }
+
+  .swastik-symbol {
+    width: 80px;
+    height: 80px;
+  }
+
+  .vote-bell {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vote-bell svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .vote-title {
+    font-size: 1.8rem;
+  }
+
+  .vote-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vote-candidate {
+    font-size: 1.3rem;
+  }
+}

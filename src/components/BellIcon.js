@@ -1,0 +1,57 @@
+import React, { useState } from 'react';
+import './BellIcon.css';
+
+function BellIcon({ onClick }) {
+  const [isRinging, setIsRinging] = useState(false);
+
+  const handleClick = () => {
+    setIsRinging(true);
+    
+    // Play bell sound
+    const audio = new Audio('/sounds/bell-ring.mp3');
+    audio.play().catch(err => console.log('Audio play failed:', err));
+    
+    // Call parent onClick
+    if (onClick) {
+      onClick();
+    }
+    
+    // Stop ringing animation after 1 second
+    setTimeout(() => {
+      setIsRinging(false);
+    }, 1000);
+  };
+
+  return (
+    <div className="bell-icon-wrapper">
+      <button 
+        className={`bell-icon ${isRinging ? 'ringing' : ''}`}
+        onClick={handleClick}
+        aria-label="घण्टी बजाउनुहोस्"
+        title="घण्टी बजाउनुहोस् र मतदान गर्नुहोस्"
+      >
+        <div className="bell-container">
+          <svg 
+            viewBox="0 0 24 24" 
+            fill="currentColor"
+            className="bell-svg"
+          >
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+          </svg>
+          <div className="bell-glow"></div>
+        </div>
+        <span className="bell-text">घण्टी बजाउनुहोस्</span>
+      </button>
+      
+      {isRinging && (
+        <>
+          <div className="sound-wave wave-1"></div>
+          <div className="sound-wave wave-2"></div>
+          <div className="sound-wave wave-3"></div>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default BellIcon;

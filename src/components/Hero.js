@@ -1,0 +1,50 @@
+import React from 'react';
+import './Hero.css';
+
+function Hero() {
+  return (
+    <section id="hero" className="hero">
+      <div className="hero-overlay"></div>
+      <div className="hero-content">
+        <div className="hero-text">
+          <h1 className="hero-title">भरत पराजुली</h1>
+          <div className="hero-subtitle-container">
+            <img src="/images/bell-icon.png" alt="घण्टी चिन्ह" className="hero-symbol" />
+            <h2 className="hero-subtitle">नेपाल स्वतन्त्र पार्टी</h2>
+          </div>
+          <p className="hero-location">सिन्धुपाल्चोक क्षेत्र नं. १, वडा नं. ०१</p>
+          <p className="hero-identity">ब्रह्माणी जलविद्युतका स्वामी</p>
+          <div className="hero-tagline">
+            <p>विकास, समृद्धि र सुशासनको लागि</p>
+            <p className="hero-tagline-sub">जनताको आवाज, जनताको विश्वास</p>
+          </div>
+          <div className="hero-buttons">
+            <button 
+              className="btn btn-primary"
+              onClick={() => document.getElementById('manifesto')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              घोषणापत्र हेर्नुहोस्
+            </button>
+            <button 
+              className="btn btn-secondary"
+              onClick={() => document.getElementById('gunaso')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              गुनासो पेश गर्नुहोस्
+            </button>
+          </div>
+        </div>
+        <div className="hero-image-container">
+          <div className="hero-image-frame">
+            <img src="/images/bharat-parajuli.jpg" alt="भरत पराजुली" className="hero-image" />
+          </div>
+        </div>
+      </div>
+      <div className="hero-scroll-indicator">
+        <span>तल स्क्रोल गर्नुहोस्</span>
+        <div className="scroll-arrow">↓</div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;
