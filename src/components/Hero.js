@@ -12,8 +12,8 @@ function Hero() {
             <img src="/images/bell-icon.png" alt="घण्टी चिन्ह" className="hero-symbol" />
             <h2 className="hero-subtitle">राष्ट्रिय स्वतन्त्र पार्टी</h2>
           </div>
-          <p className="hero-location">सिन्धुपाल्चोक क्षेत्र नं. १, वडा नं. ०१</p>
-          <p className="hero-identity">ब्रह्माणी जलविद्युतका स्वामी</p>
+          <p className="hero-location">सिन्धुपाल्चोक क्षेत्र नं. १</p>
+          <p className="hero-identity">Founder of ब्रह्माणी जलविद्युतका</p>
           <div className="hero-tagline">
             <p>विकास, समृद्धि र सुशासनको लागि</p>
             <p className="hero-tagline-sub">जनताको आवाज, जनताको विश्वास</p>

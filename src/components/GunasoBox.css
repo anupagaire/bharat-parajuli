@@ -1,18 +1,19 @@
-/* Floating compact Gunaso Box */
 .gunaso-box {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 100px;   /* float above bell */
+  right: 30px;     /* align with bell */
   width: 320px;
   max-width: 90%;
   background: white;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   padding: 20px;
-  z-index: 9999;
+  z-index: 9999;   /* below bell */
   transition: all 0.3s ease;
   font-family: 'Mukta', sans-serif;
 }
+
+
 
 .gunaso-box h2 {
   font-size: 1.2rem;

@@ -17,7 +17,7 @@ function Footer() {
           </p>
           <div className="footer-party">
             <img src="/images/party-logo.png" alt="नेपाल स्वतन्त्र पार्टी" />
-            <span>नेपाल स्वतन्त्र पार्टी</span>
+            <span>राष्ट्रिय स्वतन्त्र पार्टी</span>
           </div>
         </div>
 

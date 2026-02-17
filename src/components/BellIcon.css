@@ -1,9 +1,17 @@
 .bell-icon-wrapper {
   position: fixed;
-  bottom: 30px;
+  bottom: 30px;    /* bell at the very bottom */
   right: 30px;
-  z-index: 1500;
+  z-index: 10000;  /* above everything else */
 }
+
+
+@media (max-width: 768px) {
+  .bell-icon-wrapper {
+    display: none; /* optional */
+  }
+}
+
 
 .bell-icon {
   background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
