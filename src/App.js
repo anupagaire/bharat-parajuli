@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -13,6 +13,7 @@ import VoteAnimation from './components/VoteAnimation';
 
 function App() {
   const [showVoteAnimation, setShowVoteAnimation] = useState(false);
+  const [showHeader, setShowHeader] = useState(true); // Track if header should be visible
 
   const handleBellClick = () => {
     setShowVoteAnimation(true);
@@ -21,9 +22,20 @@ function App() {
     }, 3000);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.getElementById('hero')?.offsetHeight || 0;
+      // Show header only if scrollY is within Hero section
+      setShowHeader(window.scrollY < heroHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="App">
-      <Header />
+      {showHeader && <Header />}
       <Hero />
       <About />
       <Manifesto />

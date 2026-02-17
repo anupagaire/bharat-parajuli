@@ -23,14 +23,11 @@ function Header() {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`header `}>
       <div className="header-container">
   <div className="logo-wrapper">
     <img src="/images/party-logo.png" alt="नेपाल स्वतन्त्र पार्टी" className="party-logo" />
-    <div className="logo-text">
-      <h1>भरत पराजुली</h1>
-      <p>सिन्धुपाल्चोक क्षेत्र नं. १</p>
-    </div>
+   
   </div>
 
   <button className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

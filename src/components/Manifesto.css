@@ -1,143 +1,132 @@
 /* ===== Base Section ===== */
 .manifesto {
-  padding: 100px 20px;
+  padding: 70px 20px;
   background: linear-gradient(135deg, #f8fafc, #eef2ff);
   font-family: 'Mukta', sans-serif;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 /* ===== Title ===== */
 .section-title {
   text-align: center;
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 800;
   color: #1e293b;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 .section-subtitle {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   color: #64748b;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
-/* ===== Manifesto Card Sections ===== */
+/* ===== GRID LAYOUT (3 Column) ===== */
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ===== Card ===== */
 .manifesto-section {
   background: #ffffff;
-  padding: 40px 45px;
-  margin-bottom: 40px;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
-  transition: all 0.35s ease;
-  border-left: 6px solid #667eea;
-  animation: fadeUp 0.6s ease forwards;
-  opacity: 0;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #00aded;
+  transition: 0.3s ease;
 }
 
 .manifesto-section:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
-/* Heading */
 .manifesto-section h3 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   color: #1e293b;
 }
 
-/* Paragraph */
 .manifesto-section p {
-  font-size: 16.5px;
-  line-height: 1.9;
+  font-size: 13.5px;
+  line-height: 1.6;
   color: #334155;
-  margin-bottom: 15px;
-  text-align: justify;
+  margin-bottom: 8px;
 }
 
-/* ===== Promise Section ===== */
+/* ===== Promise Box ===== */
 .promise-box {
-  margin-top: 80px;
-  padding: 60px 50px;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin-top: 50px;
+  padding: 30px 25px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #00aded, #764ba2);
   color: white;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(102, 126, 234, 0.35);
-  animation: fadeUp 0.8s ease forwards;
 }
 
 .promise-box h3 {
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 25px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .promise-box p {
-  font-size: 18px;
-  line-height: 1.9;
-  max-width: 850px;
-  margin: 0 auto;
-  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .signature {
-  margin-top: 35px;
+  margin-top: 15px;
 }
 
 .signature p {
-  margin: 5px 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.signature-title {
-  font-size: 14px !important;
-  opacity: 0.9;
-}
-
-/* ===== Animation ===== */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  font-size: 14px;
+  margin: 4px 0;
+  font-weight: 600;
 }
 
 /* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .manifesto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .manifesto {
+    padding: 50px 15px;
+  }
+
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+  }
+
   .section-title {
-    font-size: 30px;
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
   }
 
   .manifesto-section {
-    padding: 28px;
+    padding: 16px;
   }
 
   .manifesto-section h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
-  .promise-box {
-    padding: 40px 25px;
-  }
-
-  .promise-box h3 {
-    font-size: 22px;
-  }
-
-  .promise-box p {
-    font-size: 16px;
+  .manifesto-section p {
+    font-size: 13px;
   }
 }

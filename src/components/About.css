@@ -36,7 +36,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
   padding: 15px 25px;
   border-radius: 50px;
   display: flex;
@@ -139,13 +139,13 @@
 }
 
 .about-description li strong {
-  color: #667eea;
+  color: #00aded;
   display: block;
   margin-bottom: 5px;
 }
 
 .about-vision {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
   padding: 30px;
   border-radius: 15px;
   color: white;
