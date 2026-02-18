@@ -31,7 +31,7 @@
 .footer-bell {
   width: 40px;
   height: 40px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 .footer-logo h3 {
@@ -42,7 +42,7 @@
 
 .footer-tagline {
   font-size: 1rem;
-  color: rgba(205, 8, 8, 0.8);
+  color: rgba(236, 229, 229, 0.8);
   margin-bottom: 20px;
   line-height: 1.5;
 }

@@ -8,14 +8,14 @@ function Header() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // close mobile menu on click
+      setIsMobileMenuOpen(false);
     }
   };
 
   return (
     <header className="header">
       <div className="header-container">
-        {/* Logo */}
+        {/* Logo - अब अलग layer */}
         <div className="logo-wrapper">
           <img
             src="/images/party-logo.png"
@@ -24,7 +24,7 @@ function Header() {
           />
         </div>
 
-        {/* Hamburger menu for mobile */}
+        {/* Hamburger for mobile */}
         <button
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -34,27 +34,15 @@ function Header() {
           <span></span>
         </button>
 
-        {/* Navigation */}
+        {/* Navigation - background यहाँ लाग्छ */}
         <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <ul>
-            <li>
-              <button onClick={() => scrollToSection('hero')}>गृहपृष्ठ</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('about')}>परिचय</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('manifesto')}>घोषणापत्र</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('achievements')}>उपलब्धिहरू</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('gallery')}>ग्यालरी</button>
-            </li>
-            <li>
-              <button onClick={() => scrollToSection('gunaso')}>गुनासो बक्स</button>
-            </li>
+            <li><button onClick={() => scrollToSection('hero')}>गृहपृष्ठ</button></li>
+            <li><button onClick={() => scrollToSection('about')}>परिचय</button></li>
+            <li><button onClick={() => scrollToSection('manifesto')}>घोषणापत्र</button></li>
+            <li><button onClick={() => scrollToSection('achievements')}>उपलब्धिहरू</button></li>
+            <li><button onClick={() => scrollToSection('gallery')}>ग्यालरी</button></li>
+            <li><button onClick={() => scrollToSection('gunaso')}>गुनासो बक्स</button></li>
           </ul>
         </nav>
       </div>

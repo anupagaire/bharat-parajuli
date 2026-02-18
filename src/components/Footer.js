@@ -12,9 +12,7 @@ function Footer() {
             <img src="/images/bell-icon.png" alt="घण्टी चिन्ह" className="footer-bell" />
             <h3>भरत पराजुली</h3>
           </div>
-          <p className="footer-tagline">
-            समृद्ध सिन्धुपाल्चोकको लागि प्रतिबद्ध
-          </p>
+        
           <div className="footer-party">
             <img src="/images/party-logo.png" alt="नेपाल स्वतन्त्र पार्टी" />
             <span>राष्ट्रिय स्वतन्त्र पार्टी</span>
@@ -34,7 +32,7 @@ function Footer() {
         <div className="footer-section">
           <h4>सम्पर्क जानकारी</h4>
           <div className="footer-contact">
-            <p>📍 सिन्धुपाल्चोक क्षेत्र नं. १, वडा नं. ०१</p>
+            <p>📍 सिन्धुपाल्चोक क्षेत्र नं. १</p>
             <p>📞 +९७७-९८४१२३४५६७</p>
             <p>📧 bharat.parajuli@swatantraparty.org.np</p>
           </div>
@@ -49,12 +47,8 @@ function Footer() {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
               <span>𝕏</span>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <span>▶</span>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <span>📷</span>
-            </a>
+           
+           
           </div>
         </div>
       </div>

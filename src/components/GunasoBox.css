@@ -1,34 +1,77 @@
+/* ================= DESKTOP FLOATING ================= */
+.chat-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;           /* bell को बायाँमा */
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1db1f2, #4198be);
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 10001;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
 .gunaso-box {
   position: fixed;
-  bottom: 100px;   /* float above bell */
-  right: 30px;     /* align with bell */
-  width: 320px;
-  max-width: 90%;
+  bottom: 100px;
+  right: 110px;
+  width: 350px;
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   padding: 20px;
-  z-index: 9999;   /* below bell */
-  transition: all 0.3s ease;
-  font-family: 'Mukta', sans-serif;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 9999;
 }
 
-
-
-.gunaso-box h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-  text-align: center;
+.gunaso-box.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.gunaso-box p {
-  font-size: 0.9rem;
-  text-align: center;
+/* Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
-  color: #555;
 }
 
+.chat-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 22px;
+  color: #777;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Form styling */
 .gunaso-form {
   display: flex;
   flex-direction: column;
@@ -41,98 +84,70 @@
 }
 
 .form-group label {
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 5px;
+  color: #555;
+  margin-bottom: 6px;
 }
 
 .form-group input,
 .form-group textarea {
-  padding: 10px;
-  font-size: 0.9rem;
+  padding: 12px;
   border: 2px solid #e0e0e0;
   border-radius: 8px;
-  transition: all 0.3s ease;
-  background: #fafafa;
+  font-size: 15px;
+  transition: border-color 0.2s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
   border-color: #00aded;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 80px;
+  outline: none;
 }
 
 .submit-btn {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
+  padding: 12px;
+  background: linear-gradient(135deg, #00aded, #764ba2);
   color: white;
   border: none;
   border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(102,126,234,0.3);
+  transition: all 0.2s;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(102,126,234,0.4);
+  box-shadow: 0 5px 15px rgba(0,173,237,0.4);
 }
 
 .success-message {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  margin-top: 10px;
+  padding: 12px;
+  background: #38ef7d;
   color: white;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
-  font-size: 0.95rem;
-  font-weight: 600;
-  animation: slideDown 0.4s ease;
+  font-weight: 500;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile adjustments */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+  .chat-icon {
+    display: none !important;
+  }
+
   .gunaso-box {
-    position: relative; /* Scroll with page instead of floating */
-    bottom: auto;
-    right: auto;
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
     width: 100%;
-    max-width: 100%;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .gunaso-box {
-    padding: 15px;
-  }
-
-  .submit-btn {
-    padding: 8px;
-    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 40px auto;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
   }
 }

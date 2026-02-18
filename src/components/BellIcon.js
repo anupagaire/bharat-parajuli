@@ -6,17 +6,13 @@ function BellIcon({ onClick }) {
 
   const handleClick = () => {
     setIsRinging(true);
-    
-    // Play bell sound
+
+    // Optional: bell sound (public folder मा /sounds/bell-ring.mp3 राख्नुहोस्)
     const audio = new Audio('/sounds/bell-ring.mp3');
-    audio.play().catch(err => console.log('Audio play failed:', err));
-    
-    // Call parent onClick
-    if (onClick) {
-      onClick();
-    }
-    
-    // Stop ringing animation after 1 second
+    audio.play().catch(err => console.log(err));
+
+    if (onClick) onClick();
+
     setTimeout(() => {
       setIsRinging(false);
     }, 1000);
@@ -24,15 +20,15 @@ function BellIcon({ onClick }) {
 
   return (
     <div className="bell-icon-wrapper">
-      <button 
+      <button
         className={`bell-icon ${isRinging ? 'ringing' : ''}`}
         onClick={handleClick}
         aria-label="घण्टी बजाउनुहोस्"
-        title="घण्टी बजाउनुहोस् र मतदान गर्नुहोस्"
+        title="घण्टी बजाउनुहोस्"
       >
         <div className="bell-container">
-          <svg 
-            viewBox="0 0 24 24" 
+          <svg
+            viewBox="0 0 24 24"
             fill="currentColor"
             className="bell-svg"
           >
@@ -42,14 +38,6 @@ function BellIcon({ onClick }) {
         </div>
         <span className="bell-text">घण्टी बजाउनुहोस्</span>
       </button>
-      
-      {isRinging && (
-        <>
-          <div className="sound-wave wave-1"></div>
-          <div className="sound-wave wave-2"></div>
-          <div className="sound-wave wave-3"></div>
-        </>
-      )}
     </div>
   );
 }
