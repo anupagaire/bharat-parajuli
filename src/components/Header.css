@@ -5,6 +5,8 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* ================= HEADER ================= */
+
 .header {
   position: fixed;
   top: 15px;
@@ -16,7 +18,6 @@ body {
   display: flex;
   align-items: center;
   z-index: 1000;
-  /* अब header मा background छैन – transparent */
 }
 
 .header-container {
@@ -27,20 +28,22 @@ body {
   justify-content: space-between;
 }
 
+/* ================= LOGO ================= */
 
 .party-logo {
   width: 94px;
   height: 94px;
-  object-fit: cover;          /* image लाई पूर्ण रूपमा फिट गर्छ, crop गरेर */
-  border-radius: 50%;         /* यो लाइनले circle बनाउँछ */
-  display: block;             /* optional तर राम्रो spacing को लागि */
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
-/* Nav अब rounded background सहित */
+/* ================= NAV DESKTOP ================= */
+
 .nav {
   background: #1db1f2;
   border-radius: 30px;
-  padding: 6px 20px;         
+  padding: 6px 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -70,47 +73,56 @@ body {
   transform: scale(1.05);
 }
 
-/* Hamburger */
+/* ================= HAMBURGER ================= */
+
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
   background: none;
   border: none;
-  cursor: pointer;
+  z-index: 1100;
 }
 
 .hamburger span {
-  width: 25px;
+  width: 26px;
   height: 3px;
   background: white;
+  margin: 4px 0;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
+/* Cross Animation */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile */
+/* ================= MOBILE ================= */
+
 @media (max-width: 900px) {
+
   .hamburger {
     display: flex;
   }
 
+  /* Hide desktop nav style */
   .nav {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 280px;
-    background: linear-gradient(135deg, #1db1f2, #0088cc); /* mobile sidebar gradient */
+    background: linear-gradient(135deg, #1db1f2, #0088cc);
     transform: translateX(100%);
     transition: transform 0.4s ease;
     display: flex;
@@ -132,16 +144,15 @@ body {
 
   .nav button {
     width: 220px;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     padding: 16px;
     background: rgba(255,255,255,0.2);
   }
 
-  /* Mobile मा logo पनि adjust */
-  .logo-wrapper {
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
+  /* Adjust logo size */
+  .party-logo {
+    width: 60px;
+    height: 60px;
   }
 }
 
