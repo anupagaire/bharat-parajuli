@@ -33,8 +33,7 @@ function Footer() {
           <h4>सम्पर्क जानकारी</h4>
           <div className="footer-contact">
             <p>📍 सिन्धुपाल्चोक क्षेत्र नं. १</p>
-            <p>📞 +९७७-९८४१२३४५६७</p>
-            <p>📧 bharat.parajuli@swatantraparty.org.np</p>
+            <p>📧 bharatparajuli075@gmail.com</p>
           </div>
         </div>
 
@@ -43,9 +42,6 @@ function Footer() {
           <div className="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
               <span>f</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <span>𝕏</span>
             </a>
            
            

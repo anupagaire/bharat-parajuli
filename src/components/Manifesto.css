@@ -1,7 +1,5 @@
-/* ===== Base Section ===== */
 .manifesto {
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  padding: 20px 8px;
   font-family: 'Mukta', sans-serif;
 }
 
@@ -26,12 +24,7 @@
   margin-bottom: 40px;
 }
 
-/* ===== GRID LAYOUT (3 Column) ===== */
-.manifesto-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+
 
 /* ===== Card ===== */
 .manifesto-section {

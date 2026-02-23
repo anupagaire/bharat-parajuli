@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 25px;
+  padding: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -79,7 +79,6 @@
   opacity: 0.9;
 }
 
-/* Lightbox */
 .lightbox {
   position: fixed;
   top: 0;
@@ -164,7 +163,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

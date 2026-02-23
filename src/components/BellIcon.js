@@ -7,7 +7,6 @@ function BellIcon({ onClick }) {
   const handleClick = () => {
     setIsRinging(true);
 
-    // Optional: bell sound (public folder मा /sounds/bell-ring.mp3 राख्नुहोस्)
     const audio = new Audio('/sounds/bell-ring.mp3');
     audio.play().catch(err => console.log(err));
 

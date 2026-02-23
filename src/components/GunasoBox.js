@@ -18,7 +18,6 @@ function GunasoBox() {
     e.preventDefault();
     setIsSubmitted(true);
 
-    // यहाँ API call गर्न सकिन्छ
     setTimeout(() => {
       setFormData({ email: '', message: '' });
       setIsSubmitted(false);
@@ -28,12 +27,10 @@ function GunasoBox() {
 
   return (
     <>
-      {/* Desktop chat icon */}
       <div className="chat-icon" onClick={() => setIsOpen(!isOpen)}>
         💬
       </div>
 
-      {/* Chat Box */}
       <div className={`gunaso-box ${isOpen ? 'open' : ''}`}>
         <div className="chat-header">
           <h3>गुनासो बक्स</h3>

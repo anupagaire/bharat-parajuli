@@ -15,7 +15,6 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        {/* Logo - अब अलग layer */}
         <div className="logo-wrapper">
           <img
             src="/images/party-logo.png"
@@ -24,7 +23,6 @@ function Header() {
           />
         </div>
 
-        {/* Hamburger for mobile */}
         <button
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -34,7 +32,6 @@ function Header() {
           <span></span>
         </button>
 
-        {/* Navigation - background यहाँ लाग्छ */}
         <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <ul>
             <li><button onClick={() => scrollToSection('hero')}>गृहपृष्ठ</button></li>

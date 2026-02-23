@@ -19,12 +19,12 @@ function Hero() {
             <p className="hero-tagline-sub">जनताको आवाज, जनताको विश्वास</p>
           </div>
           <div className="hero-buttons">
-            <button 
-              className="btn btn-primary"
-              onClick={() => document.getElementById('manifesto')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              घोषणापत्र हेर्नुहोस्
-            </button>
+         <button 
+  className="btn btn-primary"
+  onClick={() => window.open('/manifesto.pdf', '_blank')}
+>
+  घोषणापत्र हेर्नुहोस्
+</button>
             <button 
               className="btn btn-secondary"
               onClick={() => document.getElementById('gunaso')?.scrollIntoView({ behavior: 'smooth' })}
