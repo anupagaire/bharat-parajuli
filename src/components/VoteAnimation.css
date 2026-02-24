@@ -236,7 +236,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .vote-animation-container {
     padding: 40px 30px;

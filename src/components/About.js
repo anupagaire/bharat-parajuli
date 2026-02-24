@@ -11,10 +11,6 @@ function About() {
         <div className="about-image-section">
           <div className="about-image-wrapper">
             <img src="/images/bharat-formal.jpg" alt="भरत पराजुली" className="about-image" />
-            <div className="about-badge">
-              <img src="/images/bell-icon.png" alt="घण्टी चिन्ह" />
-              <span>घण्टी</span>
-            </div>
           </div>
         </div>
 

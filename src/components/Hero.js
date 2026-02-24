@@ -25,12 +25,7 @@ function Hero() {
 >
   घोषणापत्र हेर्नुहोस्
 </button>
-            <button 
-              className="btn btn-secondary"
-              onClick={() => document.getElementById('gunaso')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              गुनासो पेश गर्नुहोस्
-            </button>
+  
           </div>
         </div>
         <div className="hero-image-container">
@@ -40,8 +35,6 @@ function Hero() {
         </div>
       </div>
       <div className="hero-scroll-indicator">
-        <span>तल स्क्रोल गर्नुहोस्</span>
-        <div className="scroll-arrow">↓</div>
       </div>
     </section>
   );

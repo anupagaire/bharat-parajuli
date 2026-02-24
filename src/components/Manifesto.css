@@ -8,7 +8,6 @@
   margin: 0 auto;
 }
 
-/* ===== Title ===== */
 .section-title {
   text-align: center;
   font-size: 30px;
@@ -26,7 +25,6 @@
 
 
 
-/* ===== Card ===== */
 .manifesto-section {
   background: #ffffff;
   padding: 20px;
@@ -54,7 +52,6 @@
   margin-bottom: 8px;
 }
 
-/* ===== Promise Box ===== */
 .promise-box {
   margin-top: 50px;
   padding: 30px 25px;
@@ -84,16 +81,13 @@
   font-weight: 600;
 }
 
-/* ===== Responsive ===== */
 
-/* Tablet */
 @media (max-width: 992px) {
   .manifesto-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .manifesto {
     padding: 50px 15px;

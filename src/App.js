@@ -13,7 +13,7 @@ import VoteAnimation from './components/VoteAnimation';
 
 function App() {
   const [showVoteAnimation, setShowVoteAnimation] = useState(false);
-  const [showHeader, setShowHeader] = useState(true); // Track if header should be visible
+  const [showHeader, setShowHeader] = useState(true); 
 
   const handleBellClick = () => {
     setShowVoteAnimation(true);

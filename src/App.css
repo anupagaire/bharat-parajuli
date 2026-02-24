@@ -3,14 +3,12 @@
   background-color: #ffffff;
 }
 
-/* Common Section Styles EXCEPT HERO */
 section:not(.hero) {
   padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Section Titles */
 .section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -41,7 +39,6 @@ section:not(.hero) {
   line-height: 1.6;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   section:not(.hero) {
     padding: 60px 15px;
