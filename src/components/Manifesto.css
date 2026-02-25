@@ -56,7 +56,7 @@
   margin-top: 50px;
   padding: 30px 25px;
   border-radius: 18px;
-  background: linear-gradient(135deg, #00aded, #764ba2);
+  background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
   color: white;
   text-align: center;
 }

@@ -4,7 +4,7 @@
   right: 40px;         
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #1db1f2, #4198be);
+  background: linear-gradient(135deg, #1db1f2 0%, #4198be 100%);
   color: white;
   font-size: 28px;
   display: flex;
@@ -104,7 +104,7 @@
 
 .submit-btn {
   padding: 12px;
-  background: linear-gradient(135deg, #00aded, #764ba2);
+  background: linear-gradient(135deg, #00aded 0%, #764ba2 100%);
   color: white;
   border: none;
   border-radius: 50px;
